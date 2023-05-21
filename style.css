@@ -1,0 +1,108 @@
+:root{
+    color-scheme: dark;
+    font-family: Calibri, trebuchet ms, sans-serif;
+    --clr-dark: rgb(28, 27, 34);
+    --clr-gray: 45, 45, 48;
+    --clr-light: rgb(250, 250, 250);
+    --clr-red: rgb(163, 38, 51);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: inherit;
+    color: var(--clr-light);
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 900;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+
+body{
+    display: grid;
+    grid-template-rows: 2rem 1fr fit-content;
+    background-color: var(--clr-dark);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header nav{
+    position: relative;
+}
+header menu{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header nav label {
+    color: var(--clr-light);
+}
+header nav #menuCheckbox:focus ~ label svg{
+    fill: var(--clr-red);
+}
+header nav svg {
+    width: 4rem;
+    height: 4rem;
+}
+header menu{
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    background-color: var(--clr-dark);
+    font-size: 1.5rem;
+}
+header #menuCheckbox:checked ~ menu{
+    display: flex;
+}
+
+header menu a{
+    text-decoration: none;
+    padding-inline: 2rem;
+}
+
+header menu a:hover{
+    background-color: var(--clr-red);
+}
+
+#menuCheckbox{
+    appearance: none;
+}
+
+main{
+    display: flex;
+    
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background-image: url(img/untitled.png);
+    background-size: cover;
+    justify-content: center;
+}
+
+.card{
+    flex-grow: 1;
+    min-width: 370px;
+    max-width: 700px;
+    flex-basis: 500px;
+    background-color: rgba(var(--clr-gray), 0.7);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+
+}
+.card iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
