@@ -107,8 +107,7 @@ main{
     text-decoration: none;
 }
 .card:hover, .card:focus-within{
-    outline: 3px solid var(--clr-light);
-    background-color: rgba(var(--clr-gray), 1);
+    outline: 2px solid var(--clr-light);
 }
 
 .card iframe{
