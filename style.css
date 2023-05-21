@@ -61,6 +61,8 @@ header menu{
     z-index: 999;
     background-color: var(--clr-dark);
     font-size: 1.5rem;
+    width: max-content;
+    padding-block: 1rem;
 }
 header #menuCheckbox:checked ~ menu{
     display: flex;
@@ -105,4 +107,23 @@ main{
 .card iframe{
     width: 100%;
     aspect-ratio: 16/9;
+}
+
+
+#scrollTop {
+    display: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(var(--clr-gray));
+    border: none;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+#scrollTop:hover,
+#scrollTop:focus-within {
+    background-color: gray;
 }
