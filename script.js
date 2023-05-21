@@ -52,6 +52,7 @@ Sites.forEach(site => {
     title.innerText = site.name;
     frame.src = site.src;
     frame.scrolling = "no";
+    card.tabIndex = counter+1
 
     card.appendChild(title);
     card.appendChild(frame);

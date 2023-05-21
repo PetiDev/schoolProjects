@@ -106,10 +106,16 @@ main{
     border-radius: 5px;
     text-decoration: none;
 }
+.card:hover, .card:focus-within{
+    outline: 3px solid var(--clr-light);
+    background-color: rgba(var(--clr-gray), 1);
+}
+
 .card iframe{
     width: 100%;
     aspect-ratio: 16/9;
     pointer-events: none;
+    tab-size: 0;
 }
 
 footer{
