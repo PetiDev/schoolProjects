@@ -6,7 +6,31 @@ const Sites = [
     {
         name: "test 02",
         src: "https://petidev.tech"
-    }
+    },
+    {
+        name: "test 03",
+        src: "https://petidev.tech"
+    },
+    {
+        name: "test 04",
+        src: "https://petidev.tech"
+    },
+    {
+        name: "test 05",
+        src: "https://petidev.tech"
+    },
+    {
+        name: "test 06",
+        src: "https://petidev.tech"
+    },
+    {
+        name: "test 07",
+        src: "https://petidev.tech"
+    },
+    {
+        name: "test 08",
+        src: "https://petidev.tech"
+    },
 ]
 const main = document.querySelector("main");
 const menu = document.querySelector("menu");
@@ -17,14 +41,17 @@ Sites.forEach(site => {
     counter++
 
     //add site to main
-    const card = document.createElement("dir");
+    const card = document.createElement("a");
     const title = document.createElement("h2");
     const frame = document.createElement("iframe");
 
     card.classList.add("card");
-    card.id = `card_${counter}`
+    card.id = `card_${counter}`;
+    card.href = site.src;
+    card.target = "theSite"
     title.innerText = site.name;
     frame.src = site.src;
+    frame.scrolling = "no";
 
     card.appendChild(title);
     card.appendChild(frame);
@@ -39,6 +66,24 @@ Sites.forEach(site => {
     menu.appendChild(navUrl);
 
 })
+
+
+//menü bezárása ha kattint
+const menuCheckbox = document.getElementById("menuCheckbox");
+document.addEventListener("mousedown", ()=>{
+    let isChechked = menuCheckbox.checked;
+    setTimeout(() => {
+        if (isChechked) {
+            menuCheckbox.checked = false;
+        }
+    }, 80);
+})
+document.addEventListener("touchstart", ()=>{
+    if (isChechked) {
+        menuCheckbox.checked = false;
+    }
+})
+
 
 
 //vissza a tetejére
@@ -56,3 +101,16 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+
+//egyértelműen nem egy easteregg
+const notAnEasteregg = document.querySelector("header a");
+let notACounter = 0;
+
+document.addEventListener("click", ()=>{
+    notACounter++
+    if (notACounter >= 30) {
+        notAnEasteregg.style.display = "flex";
+    }
+
+})
