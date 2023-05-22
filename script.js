@@ -1,7 +1,7 @@
 const Sites = [
     {
-        name: "test 01",
-        src: "https://petidev.tech"
+        name: "Paralimpia",
+        src: "./src/paralimpia/paralimpia.html"
     },
     {
         name: "test 02",
