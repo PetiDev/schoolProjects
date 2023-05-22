@@ -47,7 +47,7 @@ function sportagak(evszak){
 
 function kiir(ertek, index, tomb){
     
-    document.writeln("<img src='sportagkepek/"+mappa+"/p"+index+".png' onclick='megNez(\""+mappa+"\","+index+");' class='kispiktogram' alt='"+ertek+"' title='"+ertek+"'>");    
+    document.writeln("<img src='./sportagkepek/"+mappa+"/p"+index+".png' onclick='megNez(\""+mappa+"\","+index+");' class='kispiktogram' alt='"+ertek+"' title='"+ertek+"'>");    
 }
 
 function megNez(evszak,index) {
@@ -64,6 +64,6 @@ function megNez(evszak,index) {
         document.getElementById('piktorgram').alt=telisportagak.split(',')[index];
         document.getElementById('piktorgram').title=telisportagak.split(',')[index];
     }
-    document.getElementById('piktorgram').src="sportagkepek/"+evszak+"/p"+index+".png";  
+    document.getElementById('piktorgram').src="./sportagkepek/"+evszak+"/p"+index+".png";  
     
 }
