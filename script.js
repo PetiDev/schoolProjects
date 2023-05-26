@@ -4,8 +4,8 @@ const Sites = [
         src: "./src/paralimpia/paralimpia.html"
     },
     {
-        name: "test 02",
-        src: "https://petidev.tech"
+        name: "Év madara",
+        src: "./src/evMadara/evmadara.html"
     },
     {
         name: "test 03",
