@@ -8,8 +8,8 @@ const Sites = [
         src: "./src/evMadara/evmadara.html"
     },
     {
-        name: "test 03",
-        src: "https://petidev.tech"
+        name: "Memoria",
+        src: "./src/memoria/"
     },
     {
         name: "test 04",
