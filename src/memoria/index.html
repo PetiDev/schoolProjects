@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h3>Párok: <p id="pairsFound">0</p>
+        </h3>
+        <h3>
+            Próbálkozások:
+            <p id="tryes">0</p>
+        </h3>
+        <h3>
+            Idő:
+            <p id="timer">0ms</p>
+        </h3>
+
+    </header>
+    <main>
+        <section class="card">
+             <dir class="content">
+                <div class="front">
+                    FRONT
+                </div>
+                <div class="back">
+                    BACK
+                </div>
+            </dir> 
+        </section>
+    </main>
+    <footer>
+        <button id="newGame" onclick="restart()">
+            Új játék
+        </button>
+        <button id="isGameSaved" onclick="toggleSavedGame()" data-save="false">
+            Mentett játék
+        </button>
+        <section id="cardAmount">
+            <label for="differentCardAmount">A különbőző kártyák száma:</label>
+            <input id="differentCardAmount" type="number" placeholder="10" min="2" max="25">
+        </section>
+        <section id="scoreboard">
+
+        </section>
+    </footer>
+
+    <dialog id="saveGameDialog">
+        <center>
+            <input type="text" id="username">
+        <button onclick="dialogSaveButton()">Mentés</button>
+        </center>
+    </dialog>
+
+
+
+</body>
+
+</html>
